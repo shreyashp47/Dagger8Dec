@@ -2,15 +2,31 @@ package com.example.dagger8dec
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var smartPhone: SmartPhone
+    //private lateinit var smartPhone: SmartPhone
+
+    //using field injection
+    //
+    @Inject
+    lateinit var smartPhone: SmartPhone
+    @Inject
+    lateinit var memoryCard: MemoryCard
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
+///using field injection in dagger 2
+//        DaggerSmartPhoneComponent.create()
+//            .inject(this)
+//            .makeACallWithRecording()
+
+
+
+        //exp 1
         //using dagger 2
 //        DaggerSmartPhoneComponent.create()
 //            .getSmartPhone()

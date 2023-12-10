@@ -1,5 +1,6 @@
-package com.example.dagger8dec
+package com.example.dagger8dec.thirdparty
 
+import com.example.dagger8dec.MemoryCard
 import dagger.Module
 import dagger.Provides
 
@@ -9,7 +10,7 @@ import dagger.Provides
 class MemoryCardModule {
 
     @Provides
-    fun providesMemoryCard(): MemoryCard{
+    fun providesMemoryCard(): MemoryCard {
     return MemoryCard()
     }
 }
